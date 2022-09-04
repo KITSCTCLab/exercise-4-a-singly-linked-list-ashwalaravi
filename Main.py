@@ -30,15 +30,14 @@ class LinkedList:
         :param data: integer data that will be used to create a node
         """
         # Writ code here
+        t = self.head
         new_node = Node(data) 
         if self.head is None :
             self.head = new_node
-            return 
-        t = self.head
-        while(t.next is not None):
-            t = t.next
-            
-        t.next = new_node
+        else:
+            while t.next is not None:
+                t = t.next
+            t.next = new_node
 
             
         
@@ -71,7 +70,7 @@ class Solution:
         """
         
         # Write code here
-        dummy  = ListNode()
+        dummy  = Node()
         othervar = dummy
         carry = 0
         while first_list or second_list or carry:
@@ -81,7 +80,7 @@ class Solution:
             val = v1 + v2 +carry 
             carry = val//10
             val = val %10
-            othervar.next = ListNode(val)
+            othervar.next = Node(val)
             
             othervar = othervar.next
             first_list = first_list.next if first_list else None 
