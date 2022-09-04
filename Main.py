@@ -31,7 +31,8 @@ class LinkedList:
         """
         # Writ code here
         new_node = ListNode(data) 
-        if self.head = new_node:
+        if self.head is None :
+            self.head = new_node
             return 
         t = self.head
         while(t.next):
