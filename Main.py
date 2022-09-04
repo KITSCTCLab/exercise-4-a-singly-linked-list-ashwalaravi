@@ -29,20 +29,24 @@ class LinkedList:
         :param data: integer data that will be used to create a node
         """
         # Writ code here
-        while(self.head.next! = None)
-        self.head = self.head.next
-        new_node = ListNode(data)
-        self.head.next = new_node
+        while(self.head.next ! = None):
+            self.head = self.head.next
+            new_node = ListNode(data)
+            self.head.next = new_node
 
+            
+        
     def status(self):
         """
         It prints all the elements of list.
         """
         # write code here
-        while (self.head ! = None)
+        while (self.head ! = None):
+            print(self.data)
+            self.head = self.head.next
+            
         
-        print(self.data)
-        self.head = self.head.next
+        
         
         
 
