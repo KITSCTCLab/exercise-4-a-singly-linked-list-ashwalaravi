@@ -47,9 +47,11 @@ class LinkedList:
         It prints all the elements of list.
         """
         # write code here
-        while (self.head ! = None):
-            print(self.data)
+        b = []
+        while self.head:
+            b.append(self.head.data)
             self.head = self.head.next
+        print(b)
             
         
         
