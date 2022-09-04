@@ -24,15 +24,20 @@ class LinkedList:
         self.head = None
 
     def insert_at_end(self, data):
+        
         """
         Insert node at end of the list
         :param data: integer data that will be used to create a node
         """
         # Writ code here
-        while(self.head.next ! = None):
-            self.head = self.head.next
-            new_node = ListNode(data)
-            self.head.next = new_node
+        new_node = ListNode(data) 
+        if self.head = new_node:
+            return 
+        t = self.head
+        while(t.next):
+            t = t.next
+            
+        t.next = new_node
 
             
         
