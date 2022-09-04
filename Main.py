@@ -30,12 +30,12 @@ class LinkedList:
         :param data: integer data that will be used to create a node
         """
         # Writ code here
-        new_node = ListNode(data) 
+        new_node = Node(data) 
         if self.head is None :
             self.head = new_node
             return 
         t = self.head
-        while(t.next):
+        while(t.next is not None):
             t = t.next
             
         t.next = new_node
