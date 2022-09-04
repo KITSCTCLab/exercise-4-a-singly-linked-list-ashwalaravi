@@ -71,8 +71,6 @@ class Solution:
         self.second_list = second_list
 
         dummy = LinkedList()
-
-        othervar = dummy
         carry = 0
 
         while first_list or second_list or carry:
@@ -81,7 +79,7 @@ class Solution:
             val = v1 + v2 + carry
             carry = val // 10
             val = val % 10
-            othervar.insert_at_end(val)
+            dummy.insert_at_end(val)
 
 
 
