@@ -6,7 +6,7 @@ class Node:
     Provide necessary documentation
     """
 
-    def __init__(self, data=None, next=None):
+    def _init_(self, data=None, next=None):
         """
         Provide necessary documentation
         """
@@ -19,7 +19,7 @@ class LinkedList:
     Provide necessary documentation
     """
 
-    def __init__(self):
+    def _init_(self):
         """
         Initialize the head
         """
@@ -46,11 +46,12 @@ class LinkedList:
         It prints all the elements of list.
         """
         # write code here
-        b = []
-        while self.head:
-            b.append(self.head.data)
-            self.head = self.head.next
-        print(b)
+        print("[",end="")
+        temp = self.head
+        while temp.next:
+            print(temp.data,end=", ")
+            temp = temp.next
+        print(f"{temp.data}]",end="\n")
 
 
 class Solution:
@@ -72,10 +73,11 @@ class Solution:
 
         dummy = LinkedList()
         carry = 0
+        temp1, temp2 = first_list.head, second_list.head
 
-        while first_list or second_list or carry:
-            v1 = self.first_list.head.data if first_list else 0
-            v2 = self.second_list.head.data if second_list else 0
+        while temp1 or temp2 or carry:
+            v1 = temp1.data if temp1 else 0
+            v2 = temp2.data if temp2 else 0
             val = v1 + v2 + carry
             carry = val // 10
             val = val % 10
@@ -83,8 +85,8 @@ class Solution:
 
 
 
-            first_list = self.first_list.head.next if first_list else None
-            second_list = self.second_list.head.next if second_list else None
+            temp1 = temp1.next if temp1 else None
+            temp2 = temp2.next if temp2 else None
         return dummy
 
 
