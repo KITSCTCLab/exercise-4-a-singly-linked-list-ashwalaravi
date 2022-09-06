@@ -19,13 +19,13 @@ class LinkedList:
     Provide necessary documentation
     """
 
-    def _init_(self):
+    def __init__(self):
         """
         Initialize the head
         """
         self.head = None
 
-    def insert__at__end(self, data):
+    def insert_at_end(self, data):
 
         """
         Insert node at end of the list
