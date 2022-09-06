@@ -6,7 +6,7 @@ class Node:
     Provide necessary documentation
     """
 
-    def _init_(self, data=None, next=None):
+    def __init__(self, data=None, next=None):
         """
         Provide necessary documentation
         """
@@ -25,7 +25,7 @@ class LinkedList:
         """
         self.head = None
 
-    def insert_at_end(self, data):
+    def insert__at__end(self, data):
 
         """
         Insert node at end of the list
